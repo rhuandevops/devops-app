@@ -4,7 +4,8 @@ const app = express();
 app.get("/", (req, res) => res.send("Hello, DevOps!"));
 
 if (require.main === module) {
-  app.listen(3000, () => console.log("App rodando na porta 3000"));
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => console.log(`App rodando na porta ${port}`));
 }
 
 module.exports = app;
