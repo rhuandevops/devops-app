@@ -20,8 +20,8 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Rodar testes (se houver)
-        run: echo "Sem testes definidos"
+      - name: Rodar testes com Jest
+        run: npm test
 
       - name: Buildar imagem Docker
         run: docker build -t minha-imagem .
